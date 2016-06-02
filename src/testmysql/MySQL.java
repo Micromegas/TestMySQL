@@ -129,11 +129,11 @@ public class MySQL { // Metodo de conexion a la BD
        try {
            db.MySQLConnection("root", "21579097", "bd1");
           // System.out.println("El usuario es: " + usuario + " y la clave es: " + password);
-           String query = "SELECT * FROM usuarios WHERE NombreUsuario='"+usuario+"' AND clave= ('"+password+"')";
+           String query = "SELECT * FROM tbl_usuarios WHERE NombreUsuario='"+usuario+"' AND clave= ('"+password+"')";
            Statement st = Conexion.createStatement();
            ResultSet rst =st.executeQuery(query);
            if (rst.next()){
-               //JOptionPane.showMessageDialog(null, "OK");
+               JOptionPane.showMessageDialog(null, "OK");
                Window wj = new Window();
                wj.setVisible(true);
            }else{

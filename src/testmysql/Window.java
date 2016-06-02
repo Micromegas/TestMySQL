@@ -161,6 +161,7 @@ public class Window extends javax.swing.JFrame {
     private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
         try {
             db.MySQLConnection("root", "21579097", "bd1"); //si dejo la bd en blanco no se conecta a ninguna bd
+            JOptionPane.showMessageDialog(null, "OK, Conectado");
         } catch (Exception ex) {
             Logger.getLogger(Window.class.getName()).log(Level.SEVERE, null, ex);
         }
